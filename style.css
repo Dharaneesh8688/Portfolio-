@@ -1,0 +1,15 @@
+body{
+    font-family: 'Rethink Sans', sans-serif;
+}
+.banner{
+    background-image: url(/img/images.jpg);
+    padding: 150px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    
+}
+.skills{
+    padding: 50px o;
+    ;
+}
