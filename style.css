@@ -8,6 +8,22 @@
       transform: scale(1);
     }
   }
+  @keyframes slide-left {
+    from {
+      transform: translateX(-100%) skewX(0);
+    }
+    to {
+      transform: translateX(0) skewX(11);
+    }
+  }
+  @keyframes slide-right {
+    from {
+      transform: translateX(100%) skewX(0);
+    }
+    to {
+      transform: translateX(0) skewX(2);
+    }
+  }
 
  .project-page:hover{
   cursor: pointer;
@@ -53,6 +69,7 @@ border: 2px solid white !important;
 width: 500px;
 height: 450px;
 overflow: hidden;
+animation: slide-left 3s ease forwards;
 }
 .card-2{
 color: rgb(0, 0, 0);
@@ -61,6 +78,7 @@ border-radius: 0 !important;
   border: 2px solid rgb(0, 0, 0) !important; 
 width: 500px;
 height: 450px;
+animation: slide-right 3s ease forwards;
 
 }
 .content-1{
@@ -171,6 +189,7 @@ height: 390px;
 .card-2{
 color: rgb(0, 0, 0);
 border-radius: 0;
+
 background: transparent;
 border: 2px solid rgb(0, 0, 0); 
 width: 330px;
@@ -226,6 +245,7 @@ background: transparent;
 border: 2px solid rgb(0, 0, 0); 
 width: 400px;
 height: 200px;
+margin-left: 4px;
 
 }
 .sayhi{
@@ -306,6 +326,7 @@ background: transparent;
 border: 2px solid rgb(0, 0, 0); 
 width: 300px;
 height: 200px;
+margin-left: 4px;
 
 }
 img{
@@ -386,6 +407,7 @@ background: transparent;
 border: 2px solid rgb(0, 0, 0); 
 width: 240px;
 height: 280px;
+margin-left: 4px;
 
 }
 img{
