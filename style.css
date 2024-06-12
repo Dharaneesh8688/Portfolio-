@@ -29,6 +29,13 @@ text-decoration: underline;
     display: none;
     
   }
+  .sayhi:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .contact-back{
+    cursor: pointer;
+  }
   
 a:hover{
   text-decoration: underline;
@@ -676,6 +683,7 @@ skills */
 .maincontact{
   display: none;
   background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255));
+  font-size: large;
 }
 
 .contact{
@@ -700,12 +708,24 @@ skills */
   .contact .second-contact form {
       width: 95% !important;
   }
+  .maincontact{
+  
+    background: linear-gradient(to right, rgb(250, 248, 248), rgb(0, 0, 0));
+  
+  }
+  .contact-back{
+    background-color: #bab7b7 !important;
+  }
+ 
+ 
+}
+.contact-back:hover{
+  background-color: grey;
 }
 .contact-back{
   position: absolute;
   top: 3%;
   left: 85%;
- 
   padding: 3px;
   background-color:transparent;
   border-radius: 50%;
