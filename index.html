@@ -9,6 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lobster&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+  publicKey: "OvAr8yYrhRC9tCLne",
+});
+})();
+</script>
   <style>
     .img-1{
       position: absolute;
@@ -76,8 +86,7 @@
         </div>
       </div>
       <div class="nav-3 d-flex flex-column  align-items-end  justify-content-around p-3 ">
-        <div class="sayhi"> <a style="color: unset;" href="mailto:
-            dharaneesh8688@gmail.com">SAY HI..</a></div>
+        <div class="sayhi">SAY HI..</div>
         <div class="main-nav  d-flex flex-column align-items-end justify-content-around  ">
           <div class="about resume pb-5"><a style="color: unset; width: 100px;" href="resume.pdf" download="Resume">Resume</a>
           </div>
@@ -362,6 +371,42 @@
         </div>
     </div>
   </div>
+  <!-- contact -->
+  <div class="maincontact">
+    <div class="contact-back">Back</div>
+    
+    <div class="contact">
+        
+        <div class="second-contact p-5">
+
+            
+        <form style="width: 26rem;" onsubmit="event.preventDefault(); SendMail();">
+          <center class="mb-3"><h2>Contact</h2></center>
+            <div data-mdb-input-init class="form-outline mb-4"  >
+              <input type="text" id="fullName" class="form-control" required />
+              <label class="form-label" for="fullName">Name</label>
+            </div>
+          
+           
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email"  id="email_id" class="form-control" required/>
+              <label class="form-label" for="email_id">Email address</label>
+            </div>
+          
+           
+            <div data-mdb-input-init class="form-outline mb-4">
+              <textarea class="form-control"id="message"  rows="4" required></textarea>
+              <label class="form-label" for="message">Message</label>
+            </div>
+            <div class="loding pb-3"></div>
+          
+<button data-mdb-ripple-init  type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+
+          </form>
+          <button id="close" class="btn btn-danger btn-block mb-4">close</button>
+        </div>
+    </div>
+</div>
 </body>
 <script>
    
@@ -375,6 +420,85 @@ let skill = document.querySelector(".skill");
 let skillBody = document.querySelector(".skill-body");
 let skillparticals = document.querySelector("#particle-container");
 let skillBack = document.querySelector(".skill-back");
+let sayhi = document.querySelector(".sayhi");
+let contact = document.querySelector(".maincontact");
+let close = document.querySelector("#close");
+let loding = document.querySelector(".loding");
+let contactBack = document.querySelector(".contact-back");
+
+
+sayhi.addEventListener("click", function() {
+    
+    contact.style.display = "block";
+    content.style.display = "none";
+
+    if ( contact.requestFullscreen) {
+        contact.requestFullscreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    } else if ( contact.mozRequestFullScreen) {
+        contact.mozRequestFullScreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    } else if ( contact.webkitRequestFullscreen) {
+        contact.webkitRequestFullscreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    } else if ( contact.msRequestFullscreen) {
+        contact.msRequestFullscreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    }
+});
+contactBack.addEventListener("click", function() {
+  
+  content.style.display = "block";
+  contact.style.display = "none";
+
+  if (content.requestFullscreen) {
+      content.requestFullscreen().catch((err) => {
+          console.log(`Error attempting to enable fullscreen: ${err.message}`);
+      });
+  } else if (content.mozRequestFullScreen) {
+      content.mozRequestFullScreen().catch((err) => {
+          console.log(`Error attempting to enable fullscreen: ${err.message}`);
+      });
+  } else if (content.webkitRequestFullscreen) {
+      content.webkitRequestFullscreen().catch((err) => {
+          console.log(`Error attempting to enable fullscreen: ${err.message}`);
+      });
+  } else if (content.msRequestFullscreen) {
+      content.msRequestFullscreen().catch((err) => {
+          console.log(`Error attempting to enable fullscreen: ${err.message}`);
+      });
+  }
+
+});
+close.addEventListener("click", function() {
+  
+    content.style.display = "block";
+    contact.style.display = "none";
+
+    if (content.requestFullscreen) {
+        content.requestFullscreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    } else if (content.mozRequestFullScreen) {
+        content.mozRequestFullScreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    } else if (content.webkitRequestFullscreen) {
+        content.webkitRequestFullscreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    } else if (content.msRequestFullscreen) {
+        content.msRequestFullscreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    }
+
+});
+
 
 skillBack.addEventListener("click", function() {
     button.remove();
@@ -734,8 +858,26 @@ projectPage.addEventListener("click", function() {
 });
 
 </script>
+<!-- contact -->
 <script>
-     
+      function SendMail() {
+        let loding = document.querySelector(".loding");
+        loding.innerHTML = "loding....";
+        var params = {
+            from_name : document.getElementById("fullName").value,
+            email_id : document.getElementById("email_id").value,
+            message: document.getElementById("message").value
+        }
+
+        emailjs.send("service_xjjeork", "template_zj67kbr", params).then(function (res) {
+            loding.innerHTML = " Message send succesfully";;
+            
+            document.getElementById("fullName").value = '';
+            document.getElementById("email_id").value = '';
+            document.getElementById("message").value = '';
+         
+        })
+    }
 </script>
 
 </html>
