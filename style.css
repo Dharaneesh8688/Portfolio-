@@ -1,13 +1,4 @@
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.3);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
+
   @keyframes slide-left {
     from {
       transform: translateX(-100%) skewX(0);
@@ -36,7 +27,7 @@ text-decoration: underline;
  }
   .main-container {
     display: none;
-    animation: fadeIn 5s ease forwards;
+    
   }
   
 a:hover{
@@ -493,7 +484,7 @@ padding: 10px;
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
-  border-radius: 5px 100px 5px 100px;
+  border-radius: 0px 60px 0px 60px;
   color: white;
   transition: transform 0.6s;
 }
@@ -563,7 +554,7 @@ background-color: gray;
   border-radius: 10px;
  
   font-size: small;
-  border-radius: 5px 100px 5px 100px;
+  border-radius: 0px 60px 0px 60px;
   color: rgb(0, 0, 0);
   transition: transform 0.6s; }
  
@@ -582,7 +573,7 @@ background-color: gray;
   border-radius: 10px;
  
   font-size: small;
-  border-radius: 5px 100px 5px 100px;
+  border-radius: 0px 60px 0px 60px;
   color: rgb(0, 0, 0);
   transition: transform 0.6s; }
  
@@ -600,7 +591,7 @@ background-color: gray;
   backface-visibility: hidden;
   border-radius: 10px;
   font-size: medium;
-  border-radius: 5px 100px 5px 100px;
+  border-radius: 0px 60px 0px 60px;
   color: rgb(0, 0, 0);
   transition: transform 0.6s; }
 
