@@ -669,3 +669,51 @@ skills */
   }
 
 }
+
+
+
+/* contact */
+.maincontact{
+  display: none;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255));
+}
+
+.contact{
+ 
+ background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.second-contact{
+  border: 2px solid black;
+  border-radius: 7px;
+ 
+}
+@media (max-width: 576px) {
+
+  .contact .second-contact {
+      padding: 1r;
+  }
+  .contact .second-contact form {
+      width: 95% !important;
+  }
+}
+.contact-back{
+  position: absolute;
+  top: 3%;
+  left: 85%;
+ 
+  padding: 3px;
+  background-color:transparent;
+  border-radius: 50%;
+  border: 2px solid black;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
