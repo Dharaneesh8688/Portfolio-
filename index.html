@@ -383,19 +383,19 @@ emailjs.init({
         <form style="width: 26rem;" onsubmit="event.preventDefault(); SendMail();">
           <center class="mb-3"><h2>Contact</h2></center>
             <div data-mdb-input-init class="form-outline mb-4"  >
-              <input type="text" id="fullName" class="form-control" required />
+              <input type="text" id="fullName" placeholder="Full Name" class="form-control" required />
               <label class="form-label" for="fullName">Name</label>
             </div>
           
            
             <div data-mdb-input-init class="form-outline mb-4">
-              <input type="email"  id="email_id" class="form-control" required/>
+              <input type="email"  id="email_id" placeholder="Email" class="form-control" required/>
               <label class="form-label" for="email_id">Email address</label>
             </div>
           
            
             <div data-mdb-input-init class="form-outline mb-4">
-              <textarea class="form-control"id="message"  rows="4" required></textarea>
+              <textarea class="form-control"id="message" placeholder="Message"  rows="4" required></textarea>
               <label class="form-label" for="message">Message</label>
             </div>
             <div class="loding pb-3"></div>
