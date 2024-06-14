@@ -627,6 +627,11 @@ projectPage.addEventListener("click", function() {
     }
 });
 
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+
 skill.addEventListener("click", function() {
     particlesJS('particle-container', {
         "particles": {
