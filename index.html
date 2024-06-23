@@ -605,24 +605,23 @@ projectBack.addEventListener("click", function() {
     projectBody.style.display = "none";
     content.style.display = "block";
 
-    if (document.exitFullscreen) {
-        document.exitFullscreen().catch((err) => {
-            console.log(`Error attempting to exit fullscreen: ${err.message}`);
+    if ( content.requestFullscreen) {
+        content.requestFullscreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
         });
-    } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen().catch((err) => {
-            console.log(`Error attempting to exit fullscreen: ${err.message}`);
+    } else if ( content.mozRequestFullScreen) {
+        content.mozRequestFullScreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
         });
-    } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen().catch((err) => {
-            console.log(`Error attempting to exit fullscreen: ${err.message}`);
+    } else if ( content.webkitRequestFullscreen) {
+        content.webkitRequestFullscreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
         });
-    } else if (document.msExitFullscreen) {
-        document.msExitFullscreen().catch((err) => {
-            console.log(`Error attempting to exit fullscreen: ${err.message}`);
+    } else if ( content.msRequestFullscreen) {
+        content.msRequestFullscreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
         });
     }
- 
 
 });
 
