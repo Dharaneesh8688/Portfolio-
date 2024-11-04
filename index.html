@@ -37,7 +37,7 @@ emailjs.init({
     <div class="row no-gutters">
      <div class="nav-1 d-flex  align-items-start justify-content-between p-3 ">
       <div class="initial">VD</div>
-      <div class="home px-5"><span style="color: inherit;">Home</span></div>
+      <div class="navAchivement px-5"><span style="color: inherit; font-size:larger;">feads</span></div>
       </div>
   <div class="nav-2 d-flex  flex-column align-items-center justify-content-end justify-content-around ">
   <div class="project-page">Project</div>
@@ -431,6 +431,63 @@ emailjs.init({
         </div>
     </div>
   </div>
+  <!-- achivements -->
+  <div class="achivement">
+    <div class="container ac">
+        <div class="row justify-content-center"> <!-- Center the row content -->
+            <div class="col-md-6 mb-4"> <!-- Add margin bottom for spacing -->
+                <div class="card acard">
+                    <img src="IMG-20240105-WA0003.jpg" class="card-img-top" alt="Example Image 1">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4"> <!-- Add margin bottom for spacing -->
+                <div class="card acard">
+                    <img src="IMG_20240421_182040_1.jpg" class="card-img-top" alt="Example Image 2">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card acard">
+                    <img src="Screenshot from 2024-10-20 13-21-28.png" class="card-img-top" alt="Example Image 3">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card acard">
+                    <img src="Screenshot from 2024-10-20 13-19-11.png" class="card-img-top" alt="Example Image 4">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card acard">
+                    <img src="Screenshot from 2024-10-20 13-21-13.png" class="card-img-top" alt="Example Image 5">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card acard">
+                    <img src="Screenshot from 2024-10-20 13-21-51.png" class="card-img-top" alt="Example Image 6">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
   <!-- contact -->
   <div class="maincontact">
     <div class="contact-back">Back</div>
@@ -485,8 +542,34 @@ let contact = document.querySelector(".maincontact");
 let close = document.querySelector("#close");
 let loding = document.querySelector(".loding");
 let contactBack = document.querySelector(".contact-back");
+let achivement = document.querySelector(".achivement");
+let navachivement = document.querySelector(".navAchivement");
 
+navachivement.addEventListener("click", function() {
+    button.remove();
+    content.style.display = "none";
+    projectBody.style.display = "none"
+    skillBody.style.display = "none"
+    achivement.style.display = "block"
 
+    if ( achivement.requestFullscreen) {
+        achivement.requestFullscreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    } else if ( achivement.mozRequestFullScreen) {
+        achivement.mozRequestFullScreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    } else if ( achivement.webkitRequestFullscreen) {
+        achivement.webkitRequestFullscreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    } else if ( achivement.msRequestFullscreen) {
+        achivement .msRequestFullscreen().catch((err) => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+    }
+});
 sayhi.addEventListener("click", function() {
     
     contact.style.display = "block";

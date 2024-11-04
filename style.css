@@ -799,3 +799,28 @@ skills */
  
 }
 
+/* Achivements */
+.achivement{
+  display: none;
+overflow-y: scroll;
+}
+/* .ac {
+  padding: 20px;
+  border-radius: 10px;
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  
+}
+.acard {
+  width: 36rem;
+  margin: 20px; 
+} */
+.acard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc; /* Optional: border around cards */
+  border-radius: 5px; /* Optional: rounded corners */
+  overflow: hidden; /* Optional: hide overflow */
+}
+
